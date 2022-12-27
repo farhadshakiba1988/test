@@ -45,7 +45,7 @@ services:
       container_name: 'nginx1'
       restart: 'always'
       ports:
-        - '8080:80'
+        - '80:80'
       volumes:
         - type: 'bind'
           source: './volumes/media'
