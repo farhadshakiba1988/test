@@ -1,453 +1,578 @@
 {% load static %}
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>www.Farhadshakiba.com</title>
-    <!--
-    Moonlight Template
-    https://templatemo.com/tm-512-moonlight
-    -->
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <title>کیمیا اندیشان</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
 
-    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
-    <link rel="stylesheet" href="{% static 'css/bootstrap-theme.min.css' %}">
-    <link rel="stylesheet" href="{% static 'css/fontAwesome.css' %}">
-    <link rel="stylesheet" href="{% static 'css/light-box.css' %}">
-    <link rel="stylesheet" href="{% static 'css/templatemo-main.css' %}">
+    <!-- Favicon -->
+    <link href="{% static 'img/favicon.ico' %}" rel="icon">
 
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="{% static 'https://fonts.googleapis.com' %}">
+    <link rel="preconnect" href="{% static 'https://fonts.gstatic.com' %}" crossorigin>
+    <link href="{% static 'https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap' %}"
+          rel="stylesheet">
 
-    <script src="{% static 'js/vendor/modernizr-2.8.3-respond-1.4.2.min.js' %}"></script>
+    <!-- Icon Font Stylesheet -->
+    <link href="{% static 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css' %}"
+          rel="stylesheet">
+    <link href="{% static 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css' %}"
+          rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="{% static 'lib/animate/animate.min.css' %}" rel="stylesheet">
+    <link href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
 </head>
 
 <body>
-
-<div class="sequence">
-
-    <div class="seq-preloader">
-        <svg width="39" height="16" viewBox="0 0 39 16" xmlns="http://www.w3.org/2000/svg"
-             class="seq-preload-indicator">
-            <g fill="#F96D38">
-                <path class="seq-preload-circle seq-preload-circle-1"
-                      d="M3.999 12.012c2.209 0 3.999-1.791 3.999-3.999s-1.79-3.999-3.999-3.999-3.999 1.791-3.999 3.999 1.79 3.999 3.999 3.999z"/>
-                <path class="seq-preload-circle seq-preload-circle-2"
-                      d="M15.996 13.468c3.018 0 5.465-2.447 5.465-5.466 0-3.018-2.447-5.465-5.465-5.465-3.019 0-5.466 2.447-5.466 5.465 0 3.019 2.447 5.466 5.466 5.466z"/>
-                <path class="seq-preload-circle seq-preload-circle-3"
-                      d="M31.322 15.334c4.049 0 7.332-3.282 7.332-7.332 0-4.049-3.282-7.332-7.332-7.332s-7.332 3.283-7.332 7.332c0 4.05 3.283 7.332 7.332 7.332z"/>
-            </g>
-        </svg>
+<!-- Spinner Start -->
+<div id="spinner"
+     class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+        <span class="sr-only">Loading...</span>
     </div>
-
 </div>
+<!-- Spinner End -->
 
 
-<nav>
-    <div class="logo">
-        <img src="{% static 'img/#' %}" alt="">
+<!-- Navbar Start -->
+<nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+    <a href="#" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+        <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>کیمیا اندیشان</h2>
+    </a>
+    <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav ms-auto p-4 p-lg-0">
+            <a href="#" class="nav-item nav-link">درباره ما</a>
+            <a href="#" class="nav-item nav-link">خدمات ما</a>
+            <a href="#" class="nav-item nav-link">ارتباط با ما</a>
+        </div>
+        <a href="" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">همکاری با ما<i
+                class="fa fa-arrow-right ms-3"></i></a>
     </div>
-    <div class="mini-logo">
-        <img src="{% static 'img/#' %}" alt="">
-    </div>
-    <ul>
-        <li><a href="#1"><i class="fa fa-home"></i> <em>Home</em></a></li>
-        <li><a href="#2"><i class="fa fa-user"></i> <em>About</em></a></li>
-        <li><a href="#3"><i class="fa fa-pencil"></i> <em>Entries</em></a></li>
-        <li><a href="#4"><i class="fa fa-image"></i> <em>Projects</em></a></li>
-    </ul>
 </nav>
+<!-- Navbar End -->
 
-<div class="slides">
-    <div class="slide" id="1">
-        <div class="content first-content">
-            <div class="container-fluid">
-                <div class="col-md-3">
-                    <div class="author-image"><img src="{% static 'img/farhadshakiba.jpg' %}" alt="Author Image">
-                    </div>
-                </div>
-                <div class="col-md-9">
-                    <p>Heya, I'm Farhad shakiba - a data engineer consultant in the Iran</p>
-                    <p>Please take a look at my youtube chanel at<strong><a rel="nofollow" href="#">Learning Data
-                        Engineering</a></strong>We cannot solve our problems with the same thinking we used when we
-                        created them.</em> Albert Einstein</p>
-                    <div class="main-btn"><a href="#2">Read More</a></div>
-                    <div class="fb-btn"><a rel="nofollow"
-                                           href="https://www.youtube.com/channel/UCsobRhxlyButansN-xQBtnw">Youtube
-                        Chanel</a></div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="slide" id="2">
-        <div class="content second-content">
-            <div class="container-fluid">
-                <div class="col-md-6">
-                    <div class="left-content">
-                        <h2>About Us</h2>
-                        <p>Please tell your friends about templatemo website. A variety of free CSS templates are
-                            available for immediate downloads.</p>
-                        <p>Phasellus vitae faucibus orci. Etiam eleifend orci sed faucibus semper. Cras varius dolor et
-                            augue fringilla, eu commodo sapien iaculis. Donec eget dictum tellus. <a
-                                    href="#">Curabitur</a> a interdum diam. Nulla vestibulum porttitor porta.</p>
-                        <p>Nulla vitae interdum libero, vel posuere ipsum. Phasellus interdum est et dapibus tempus.
-                            Vestibulum malesuada lorem condimentum mauris ornare dapibus. Curabitur tempor ligula et <a
-                                    href="#">placerat</a> molestie.</p>
-                        <p>Aliquam efficitur eu purus in interdum. <a href="#">Etiam tincidunt</a> magna ex, sit amet
-                            lobortis felis bibendum id. Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-                        <div class="main-btn"><a href="#3">Read More</a></div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="right-image">
-                        <img src="{% static 'img/about_image.jpg' %}" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="slide" id="3">
-        <div class="content third-content">
-            <div class="container-fluid">
-                <div class="col-md-12">
-                    <div class="row">
-                        <div class="first-section">
-                            <div class="container-fluid">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="left-content">
-                                            <h2>Quisque commodo quam</h2>
-                                            <p>Vestibulum augue ex, finibus sit amet nisi id, maximus ultrices ipsum.
-                                                Maecenas rhoncus nibh in mauris lobortis, a maximus diam faucibus. In et
-                                                eros urna. Suspendisse potenti. Pellentesque commodo, neque nec molestie
-                                                tempus, purus ante feugiat augue.</p>
-                                            <div class="main-btn"><a href="#4">Continue Reading</a></div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="right-image">
-                                            <img src="{% static 'img/first_service.jpg' %}" alt="first service">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="second-section">
-                            <div class="container-fluid">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="left-image">
-                                            <img src="{% static 'img/second_service.jpg' %}" alt="second service">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="right-content">
-                                            <h2>Maecenas eu purus eu sapien</h2>
-                                            <p>Sed vitae felis in lorem mollis mollis eget in leo. Donec commodo, ex nec
-                                                rutrum venenatis, nisi nisl malesuada magna, sed semper ipsum enim a
-                                                ipsum. Aenean in ante vel mi molestie bibendum. Quisque sit amet lacus
-                                                in diam pretium faucibus. Cras vel justo lorem.</p>
-<!--                                            <div class="main-btn"><a href="#4">Continue Reading</a></div>-->
-                                            <button type="button" class="btn btn-outline-secondary">
-                                                 <a rel="nofollow" href="https://github.com/farhadshakiba1988">Github</a>
-                                            </button>
-                                            &nbsp;
-                                            &nbsp;
-                                            <button type="button" class="btn btn-outline-secondary">
-                                                 <a rel="nofollow" href="https://linkedin.com/in/farhad-shakiba">Linkedin</a>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+
+<!-- Carousel Start -->
+<div class="container-fluid p-0 mb-5">
+    <div class="owl-carousel header-carousel position-relative">
+        <div class="owl-carousel-item position-relative">
+            <img class="img-fluid" src="{% static 'img/carousel-1.jpg' %}" alt="">
+            <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
+                 style="background: rgba(24, 29, 56, .7);">
+                <div class="container">
+                    <div class="row justify-content-start">
+                        <div class="col-sm-10 col-lg-8">
+                            <h5 class="text-primary text-uppercase mb-3 animated slideInDown"></h5>
+                            <h1 class="display-3 text-white animated slideInDown"></h1>
+                            <p class="fs-5 text-white mb-4 pb-2"></p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="slide" id="4">
-        <div class="content fourth-content">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-4 col-sm-6">
-                        <div class="item">
-                            <div class="thumb">
-                                <a href="{% static 'img/first_big_item.jpg' %}" data-lightbox="image-1">
-                                    <div class="hover-effect">
-                                        <div class="hover-content">
-                                            <h2>Number One</h2>
-                                            <p>Quisque sit amet lacus in diam pretium faucibus. Cras vel justo
-                                                lorem.</p>
-                                        </div>
-                                    </div>
-                                </a>
-                                <div class="image">
-                                    <img src="{% static 'img/first_item.jpg' %}">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6">
-                        <div class="item">
-                            <div class="thumb">
-                                <a href="{% static 'img/second_big_item.jpg' %}" data-lightbox="image-1">
-                                    <div class="hover-effect">
-                                        <div class="hover-content">
-                                            <h2>Number Two</h2>
-                                            <p>Donec eget dictum tellus. Curabitur a interdum diam. Nulla vestibulum
-                                                porttitor porta.</p>
-                                        </div>
-                                    </div>
-                                </a>
-                                <div class="image">
-                                    <img src="{% static 'img/second_item.jpg' %}">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6">
-                        <div class="item">
-                            <div class="thumb">
-                                <a href="{% static 'img/third_big_item.jpg' %}" data-lightbox="image-1">
-                                    <div class="hover-effect">
-                                        <div class="hover-content">
-                                            <h2>Number Three</h2>
-                                            <p>Cras varius dolor et augue fringilla, eu commodo sapien iaculis.</p>
-                                        </div>
-                                    </div>
-                                </a>
-                                <div class="image">
-                                    <img src="{% static 'img/third_item.jpg' %}">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6">
-                        <div class="item">
-                            <div class="thumb">
-                                <a href="{% static 'img/fourth_big_item.jpg' %}" data-lightbox="image-1">
-                                    <div class="hover-effect">
-                                        <div class="hover-content">
-                                            <h2>Number Four</h2>
-                                            <p>Vestibulum augue ex, finibus sit amet nisi id, maximus ultrices
-                                                ipsum.</p>
-                                        </div>
-                                    </div>
-                                </a>
-                                <div class="image">
-                                    <img src="{% static 'img/fourth_item.jpg' %}">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6">
-                        <div class="item">
-                            <div class="thumb">
-                                <a href="{% static 'img/fifth_big_item.jpg' %}" data-lightbox="image-1">
-                                    <div class="hover-effect">
-                                        <div class="hover-content">
-                                            <h2>Fifth Item</h2>
-                                            <p>Donec commodo, ex nec rutrum venenatis, nisi nisl malesuada magna.</p>
-                                        </div>
-                                    </div>
-                                </a>
-                                <div class="image">
-                                    <img src="{% static 'img/fifth_item.jpg' %}">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6">
-                        <div class="item">
-                            <div class="thumb">
-                                <a href="{% static 'img/sixth_big_item.jpg' %}" data-lightbox="image-1">
-                                    <div class="hover-effect">
-                                        <div class="hover-content">
-                                            <h2>Sixth Item</h2>
-                                            <p>Maecenas dapibus neque sed nisl consectetur, id semper nisi egestas.</p>
-                                        </div>
-                                    </div>
-                                </a>
-                                <div class="image">
-                                    <img src="{% static 'img/sixth_item.jpg' %}">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6">
-                        <div class="item">
-                            <div class="thumb">
-                                <a href="{% static 'img/seventh_big_item.jpg' %}" data-lightbox="image-1">
-                                    <div class="hover-effect">
-                                        <div class="hover-content">
-                                            <h2>Number Seven</h2>
-                                            <p>Etiam aliquet, est id varius fringilla, eros libero pellentesque
-                                                lectus.</p>
-                                        </div>
-                                    </div>
-                                </a>
-                                <div class="image">
-                                    <img src="{% static 'img/seventh_item.jpg' %}">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6">
-                        <div class="item">
-                            <div class="thumb">
-                                <a href="{% static 'img/eight_big_item.jpg' %}" data-lightbox="image-1">
-                                    <div class="hover-effect">
-                                        <div class="hover-content">
-                                            <h2>Number Eight</h2>
-                                            <p>Vestibulum augue ex, finibus sit amet nisi id, maximus ultrices
-                                                ipsum.</p>
-                                        </div>
-                                    </div>
-                                </a>
-                                <div class="image">
-                                    <img src="{% static 'img/eight_item.jpg' %}">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6">
-                        <div class="item">
-                            <div class="thumb">
-                                <a href="{% static 'img/ninth_big_item.jpg' %}" data-lightbox="image-1">
-                                    <div class="hover-effect">
-                                        <div class="hover-content">
-                                            <h2>Number Nine</h2>
-                                            <p>Orci varius natoque penatibus et magnis dis parturient montes.</p>
-                                        </div>
-                                    </div>
-                                </a>
-                                <div class="image">
-                                    <img src="{% static 'img/ninth_item.jpg' %}">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6">
-                        <div class="item">
-                            <div class="thumb">
-                                <a href="{% static 'img/fifth_big_item.jpg' %}" data-lightbox="image-1">
-                                    <div class="hover-effect">
-                                        <div class="hover-content">
-                                            <h2>Number Ten</h2>
-                                            <p>Vestibulum augue ex, finibus sit amet nisi id, maximus ultrices
-                                                ipsum.</p>
-                                        </div>
-                                    </div>
-                                </a>
-                                <div class="image">
-                                    <img src="{% static 'img/fifth_item.jpg' %}">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6">
-                        <div class="item">
-                            <div class="thumb">
-                                <a href="{% static 'img/first_big_item.jpg' %}" data-lightbox="image-1">
-                                    <div class="hover-effect">
-                                        <div class="hover-content">
-                                            <h2>Eleventh Item</h2>
-                                            <p>Cras varius dolor et augue fringilla, eu commodo sapien iaculis.</p>
-                                        </div>
-                                    </div>
-                                </a>
-                                <div class="image">
-                                    <img src="{% static 'img/first_item.jpg' %}">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6">
-                        <div class="item">
-                            <div class="thumb">
-                                <a href="{% static 'img/second_big_item.jpg' %}" data-lightbox="image-1">
-                                    <div class="hover-effect">
-                                        <div class="hover-content">
-                                            <h2>Twelvth Item</h2>
-                                            <p>Etiam tincidunt magna ex, sit amet lobortis felis bibendum id.</p>
-                                        </div>
-                                    </div>
-                                </a>
-                                <div class="image">
-                                    <img src="{% static 'img/second_item.jpg' %}">
-                                </div>
-                            </div>
+        <div class="owl-carousel-item position-relative">
+            <img class="img-fluid" src="{% static 'img/carousel-2.jpg' %}" alt="">
+            <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
+                 style="background: rgba(24, 29, 56, .7);">
+                <div class="container">
+                    <div class="row justify-content-start">
+                        <div class="col-sm-10 col-lg-8">
+                            <h5 class="text-primary text-uppercase mb-3 animated slideInDown"></h5>
+                            <h1 class="display-3 text-white animated slideInDown"></h1>
+                            <p class="fs-5 text-white mb-4 pb-2"></p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-
-</div>
-
-
-<div class="footer">
-    <div class="content">
-        <p><a rel="nofollow"
-              href="https://github.com/farhadshakiba1988">Github</a>
-             &nbsp;
-             &nbsp;
-            <a rel="nofollow" href="https://linkedin.com/in/farhad-shakiba">Linkedin</a>
-        </p>
     </div>
 </div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+<!-- Carousel End -->
 
-<script src="{% static 'js/vendor/bootstrap.min.js' %}"></script>
-<script src="{% static 'js/datepicker.js' %}"></script>
-<script src="{% static 'js/plugins.js' %}"></script>
+
+<!-- Service Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="service-item text-center pt-3">
+                    <div class="p-4">
+                        <i class="fa fa-3x fa-graduation-cap text-primary mb-4"></i>
+                        <h5 class="mb-3">پیاده سازی مکاتبات درون و برون سازمانی</h5>
+                        <p>می توانید با کیمیا اندیشان به راحتی و سهولت از سیستم مکاتبات به صورت خصوصی و داخل سازمانی
+                            بهره مند شوید.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="service-item text-center pt-3">
+                    <div class="p-4">
+                        <i class="fa fa-3x fa-globe text-primary mb-4"></i>
+                        <h5 class="mb-3">بررسی و تامین امنیت سازمانی</h5>
+                        <p>پیاده سازی الزامات امنیتی در تولید نرم افزار و همچنین بررسی آسیب پذیری نرم افزار های موجود در
+                            سازمان و ارائه خدمات امن سازی نظیر آنتی ویروس و فایروال</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="service-item text-center pt-3">
+                    <div class="p-4">
+                        <i class="fa fa-3x fa-home text-primary mb-4"></i>
+                        <h5 class="mb-3">پیاده سازی راهکار های ارتباطی</h5>
+                        <p>پیاده سازی ارتباطات یکپارچه VOIP صوتی و تصویری در بستری امن برای ارتباطی بی وقفه و سریع.
+                            پیاده سازی بستر ارتباط امن سازمانی در نقاط مختلف جغرافیایی</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
+                <div class="service-item text-center pt-3">
+                    <div class="p-4">
+                        <i class="fa fa-3x fa-book-open text-primary mb-4"></i>
+                        <h5 class="mb-3">تولید نرم افزار های تخصصی</h5>
+                        <p>بررسی نیازمندی های سازمانی و ارائه راهکار های تخصصی و متناسب با شرایط شما برای بهبود عملکرد
+                            سازمان</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Service End -->
+
+
+<!-- About Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="row g-5">
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
+                <div class="position-relative h-100">
+                    <img class="img-fluid position-absolute w-100 h-100" src="{% static 'img/about.jpg' %}" alt=""
+                         style="object-fit: cover;">
+                </div>
+            </div>
+            <div dir="rtl" class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                <h6 dir="rtl" class="section-title bg-white text-start text-primary pe-3">خدمات ما</h6>
+                <h1 dir="rtl" class="mb-4">گروه مهندسی کیمیا اندیشان</h1>
+                <p class="mb-4">شرکت کیمیا اندیشان یک راهکار جامع برای کسب و کار شماست</p>
+                <p class="mb-4" dir="rtl">شرکت کیمیا اندیشان عضو شورای عالی انفورماتیک، ارائه دهنده کلیه خدمات زیرساخت
+                    (شبکه و
+                    سرور)، نگهداری اطلاعات و سیستم ها، میز امداد آنلاین، امنیت اطلاعات و زیرساخت، تهیه و بهینه سازی سخت
+                    افزار، تولید نرم افزار تخصصی، راه اندازی Voip می باشد.</p>
+                <p class="mb-4" dir="rtl">طراحی تولید نرم افزار برای موبایل نظیر آندروید، PWA، طراحی امن وبسایت های
+                    سازمانی و
+                    فروشگاهی متناسب با کسب و کار شما در مجموعه تخصصی کیمیا اندیشان صورت می پذیرد.</p>
+                <p class="mb-4" dir="rtl">این شرکت با سابقه 12 سال فعالیت حرفه ای در زمینه های مختلف با به کار گیری
+                    نیروهای متخصص و متعهد در تیم های مختلف، آماده هر گونه همکاری با سازمان های دولتی، بخش خصوصی و کسب و
+                    کار های خانگی می باشد.</p>
+                <div class="row gy-2 gx-4 mb-4">
+                    <div class="col-sm-6">
+                        <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>BackendDeveloper</p>
+                    </div>
+                    <div class="col-sm-6">
+                        <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>FrontEndDeveloper</p>
+                    </div>
+                    <div class="col-sm-6">
+                        <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Online Classes</p>
+                    </div>
+                    <div class="col-sm-6">
+                        <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Skilled Instructors</p>
+                    </div>
+                    <div class="col-sm-6">
+                        <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Online Classes</p>
+                    </div>
+                    <div class="col-sm-6">
+                        <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>International Certificate</p>
+                    </div>
+                </div>
+                <a class="btn btn-primary py-3 px-5 mt-2" href="">Read More</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- About End -->
+
+
+<!-- Categories Start -->
+<div class="container-xxl py-5 category">
+    <div class="container">
+        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+            <h6 class="section-title bg-white text-center text-primary px-3">Categories</h6>
+            <h1 class="mb-5">PROJECTS DONE</h1>
+        </div>
+        <div class="row g-3">
+            <div class="col-lg-7 col-md-6">
+                <div class="row g-3">
+                    <div class="col-lg-12 col-md-12 wow zoomIn" data-wow-delay="0.1s">
+                        <a class="position-relative d-block overflow-hidden" href="">
+                            <img class="thumbnail" src="{% static 'img/cat-1.jpg' %}" alt="">
+                            <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3"
+                                 style="margin: 1px;">
+                                <h5 class="m-0">Web Development</h5>
+                                <small dir="rtl" class="text-primary">15 پروژه موفق</small>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.3s">
+                        <a class="position-relative d-block overflow-hidden" href="">
+                            <img class="img-fluid" src="{% static 'img/cat-2.jpg' %}" alt="">
+                            <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3"
+                                 style="margin: 1px;">
+                                <h5 class="m-0">Backend Development</h5>
+                                <small dir="rtl" class="text-primary">42 پروژه موفق</small>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.5s">
+                        <a class="position-relative d-block overflow-hidden" href="">
+                            <img class="img-fluid" src="{% static 'img/cat-3.jpg' %}" alt="">
+                            <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3"
+                                 style="margin: 1px;">
+                                <h5 class="m-0">business intelligence</h5>
+                                <small class="text-primary">انجام امور با مشاوره رایگان</small>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5 col-md-6 wow zoomIn" data-wow-delay="0.7s" style="min-height: 350px;">
+                <a class="position-relative d-block h-100 overflow-hidden" href="">
+                    <img class="img-fluid position-absolute w-100 h-100" src="{% static 'img/cat-4.jpg' %}" alt=""
+                         style="object-fit: cover;">
+                    <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin:  1px;">
+                        <h5 class="m-0">ERP Development</h5>
+                        <small dir="rtl" class="text-primary">مشاوره و راه اندازی ERP</small>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Categories Start -->
+
+
+<!-- Courses Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+            <h6 class="section-title bg-white text-center text-primary px-3">Projects</h6>
+            <h1 class="mb-5">خدمات ما</h1>
+        </div>
+        <div class="row g-4 justify-content-center">
+            {#            {% for i in article_data %}#}
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="course-item bg-light">
+                    <div class="position-relative overflow-hidden">
+                        <img class="thumbnail" src="{% static 'img/course-1.jpg' %}" alt="">
+                        <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
+                            <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end"
+                               style="border-radius: 30px 0 0 30px;">Read More</a>
+                            <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3"
+                               style="border-radius: 0 30px 30px 0;">Join Now</a>
+                        </div>
+                    </div>
+                    <div class="text-center p-4 pb-0">
+                        <h3 class="mb-0">$149.00</h3>
+                        <div class="mb-3">
+                            <small class="fa fa-star text-primary"></small>
+                            <small class="fa fa-star text-primary"></small>
+                            <small class="fa fa-star text-primary"></small>
+                            <small class="fa fa-star text-primary"></small>
+                            <small class="fa fa-star text-primary"></small>
+                            <small>(123)</small>
+                        </div>
+                        <h5 class="mb-4">Web Design & Development Course for Beginners</h5>
+                    </div>
+                    <div class="d-flex border-top">
+                        <small class="flex-fill text-center border-end py-2"><i
+                                class="fa fa-user-tie text-primary me-2"></i>John Doe</small>
+                        <small class="flex-fill text-center border-end py-2"><i
+                                class="fa fa-clock text-primary me-2"></i>1.49 Hrs</small>
+                        <small class="flex-fill text-center py-2"><i class="fa fa-user text-primary me-2"></i>30
+                            Students</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="course-item bg-light">
+                    <div class="position-relative overflow-hidden">
+                        <img class="thumbnail" src="{% static 'img/course-1.jpg' %}" alt="">
+                        <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
+                            <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end"
+                               style="border-radius: 30px 0 0 30px;">Read More</a>
+                            <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3"
+                               style="border-radius: 0 30px 30px 0;">Join Now</a>
+                        </div>
+                    </div>
+                    <div class="text-center p-4 pb-0">
+                        <h3 class="mb-0">$149.00</h3>
+                        <div class="mb-3">
+                            <small class="fa fa-star text-primary"></small>
+                            <small class="fa fa-star text-primary"></small>
+                            <small class="fa fa-star text-primary"></small>
+                            <small class="fa fa-star text-primary"></small>
+                            <small class="fa fa-star text-primary"></small>
+                            <small>(123)</small>
+                        </div>
+                        <h5 class="mb-4">Web Design & Development Course for Beginners</h5>
+                    </div>
+                    <div class="d-flex border-top">
+                        <small class="flex-fill text-center border-end py-2"><i
+                                class="fa fa-user-tie text-primary me-2"></i>John Doe</small>
+                        <small class="flex-fill text-center border-end py-2"><i
+                                class="fa fa-clock text-primary me-2"></i>1.49 Hrs</small>
+                        <small class="flex-fill text-center py-2"><i class="fa fa-user text-primary me-2"></i>30
+                            Students</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="course-item bg-light">
+                    <div class="position-relative overflow-hidden">
+                        <img class="thumbnail" src="{% static 'img/course-1.jpg' %}" alt="">
+                        <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
+                            <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end"
+                               style="border-radius: 30px 0 0 30px;">Read More</a>
+                            <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3"
+                               style="border-radius: 0 30px 30px 0;">Join Now</a>
+                        </div>
+                    </div>
+                    <div class="text-center p-4 pb-0">
+                        <h3 class="mb-0">$149.00</h3>
+                        <div class="mb-3">
+                            <small class="fa fa-star text-primary"></small>
+                            <small class="fa fa-star text-primary"></small>
+                            <small class="fa fa-star text-primary"></small>
+                            <small class="fa fa-star text-primary"></small>
+                            <small class="fa fa-star text-primary"></small>
+                            <small>(123)</small>
+                        </div>
+                        <h5 class="mb-4">Web Design & Development Course for Beginners</h5>
+                    </div>
+                    <div class="d-flex border-top">
+                        <small class="flex-fill text-center border-end py-2"><i
+                                class="fa fa-user-tie text-primary me-2"></i>John Doe</small>
+                        <small class="flex-fill text-center border-end py-2"><i
+                                class="fa fa-clock text-primary me-2"></i>1.49 Hrs</small>
+                        <small class="flex-fill text-center py-2"><i class="fa fa-user text-primary me-2"></i>30
+                            Students</small>
+                    </div>
+                </div>
+            </div>
+            {#            {% endfor %}#}
+        </div>
+    </div>
+</div>
+<!-- Courses End -->
+
+
+<!-- Team Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+            <h6 class="section-title bg-white text-center text-primary px-3">Teammate</h6>
+            <h1 class="mb-5">Expert Teammate</h1>
+        </div>
+        <div class="row g-4">
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="team-item bg-light">
+                    <div class="overflow-hidden">
+                        <img class="img-thumbnail" width="215" src="{% static 'img/team-8.jpg' %}" alt="">
+                    </div>
+                    <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
+                        <div class="bg-light d-flex justify-content-center pt-2 px-1">
+                            <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="text-center p-4">
+                        <h5 class="mb-0">Instructor Name</h5>
+                        <small>Designation</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="team-item bg-light">
+                    <div class="overflow-hidden">
+                        <img class="img-thumbnail" width="250" src="{% static 'img/team-7.jpg' %}" alt="">
+                    </div>
+                    <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
+                        <div class="bg-light d-flex justify-content-center pt-2 px-1">
+                            <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="text-center p-4">
+                        <h5 class="mb-0">Instructor Name</h5>
+                        <small>Designation</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="team-item bg-light">
+                    <div class="overflow-hidden">
+                        <img class="thumbnail" width="180" src="{% static 'img/team-6.jpg' %}" alt="">
+                    </div>
+                    <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
+                        <div class="bg-light d-flex justify-content-center pt-2 px-1">
+                            <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="text-center p-4">
+                        <h5 class="mb-0">Instructor Name</h5>
+                        <small>Designation</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                <div class="team-item bg-light">
+                    <div class="overflow-hidden">
+                        <img class="thumbnail" width="215" src="{% static 'img/team-5.jpg' %}" alt="">
+                    </div>
+                    <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
+                        <div class="bg-light d-flex justify-content-center pt-2 px-1">
+                            <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="text-center p-4">
+                        <h5 class="mb-0">Instructor Name</h5>
+                        <small>Designation</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Team End -->
+
+
+<!-- Testimonial Start -->
+<div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+    <div class="container">
+        <div class="text-center">
+            <h6 class="section-title bg-white text-center text-primary px-3">Customers</h6>
+            <h1 class="mb-5">مشتریان ما</h1>
+        </div>
+        <div class="owl-carousel testimonial-carousel position-relative">
+            <div class="testimonial-item text-center">
+                <img class="border rounded-circle p-2 mx-auto mb-3" src="{% static 'img/testimonial-1.jpg' %}"
+                     style="width: 80px; height: 80px;">
+                <h5 class="mb-0">بانک سامان</h5>
+                <p>خدمات پرسنلی</p>
+                <div class="testimonial-text bg-light text-center p-4">
+                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua</p>
+                </div>
+            </div>
+            <div class="testimonial-item text-center">
+                <img class="border rounded-circle p-2 mx-auto mb-3" src="{% static 'img/testimonial-2.jpg' %}"
+                     style="width: 80px; height: 80px;">
+                <h5 class="mb-0">بانک تجارت</h5>
+                <p>خدمات منابع انسانی</p>
+                <div class="testimonial-text bg-light text-center p-4">
+                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua</p>
+                </div>
+            </div>
+            <div class="testimonial-item text-center">
+                <img class="border rounded-circle p-2 mx-auto mb-3" src="{% static 'img/testimonial-3.jpg' %}"
+                     style="width: 80px; height: 80px;">
+                <h5 class="mb-0">شرکت ماموت</h5>
+                <p> ERP نرم افزار جامع</p>
+                <div class="testimonial-text bg-light text-center p-4">
+                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua</p>
+                </div>
+            </div>
+            <div class="testimonial-item text-center">
+                <img class="border rounded-circle p-2 mx-auto mb-3" src="{% static 'img/testimonial-4.jpg' %}"
+                     style="width: 80px; height: 80px;">
+                <h5 class="mb-0">Client Name</h5>
+                <p>Profession</p>
+                <div class="testimonial-text bg-light text-center p-4">
+                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Testimonial End -->
+
+
+<!-- Footer Start -->
+<div dir="rtl" class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+    <div dir="rtl" class="container py-5">
+        <div dir="rtl" class="row g-5">
+            <div dir="rtl" class="col-lg-3 col-md-6">
+                <h4 dir="rtl" class="text-white mb-3">ما را در فضای مجازی دنبال کنید</h4>
+                <a dir="rtl" class="btn btn-link" href="">About Us</a>
+                <a dir="rtl" class="btn btn-link" href="">Contact Us</a>
+                <a dir="rtl" class="btn btn-link" href="">Privacy Policy</a>
+                <a dir="rtl" class="btn btn-link" href="">Terms & Condition</a>
+                <a dir="rtl" class="btn btn-link" href="">FAQs & Help</a>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h4 dir="rtl" class="text-white mb-3">آدرس</h4>
+                <p dir="rtl" class="mb-2"><i dir="rtl" class="fa fa-map-marker-alt me-3"></i>تهران فلکه دوم صادقیه برج گلدیس طبقه اول تجاری پلاک 47</p>
+                <p dir="rtl" class="mb-2"><i dir="rtl" class="fa fa-phone-alt me-3"></i>02166536964  09126979207</p>
+                <p dir="rtl" class="mb-2"><i dir="rtl" class="fa fa-envelope me-3"></i>info@kimia-group.com</p>
+                <div class="d-flex pt-2">
+                    <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+                    <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h4 dir="rtl" class="text-white mb-3">دریافت خبرنامه ماهانه</h4>
+                <p>گروه مهندسی کیمیا از سال 1389 با هدف توانمندسازی سازمانها و شرکت‌های بزرگ دولتی و خصوصی در حوزه الکترونیکی نمودن فرآیندهای کاری، طراحی و راه اندازی سامانه‌ها، نرم‌افزارهای کاربری و برنامک (اپلیکیشن) آغاز نموده است</p>
+                <div class="position-relative mx-auto" style="max-width: 400px;">
+                    <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
+                    <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">GO
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Footer End -->
+
+
+<!-- Back to Top -->
+<a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+<!-- JavaScript Libraries -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="{% static 'lib/wow/wow.min.js' %}"></script>
+<script src="{% static 'lib/easing/easing.min.js' %}"></script>
+<script src="{% static 'lib/waypoints/waypoints.min.js' %}"></script>
+<script src="{% static 'lib/owlcarousel/owl.carousel.min.js' %}"></script>
+
+<!-- Template Javascript -->
 <script src="{% static 'js/main.js' %}"></script>
-
-<script type="text/javascript">
-    $(document).ready(function () {
-
-
-        // navigation click actions 
-        $('.scroll-link').on('click', function (event) {
-            event.preventDefault();
-            var sectionID = $(this).attr("data-id");
-            scrollToID('#' + sectionID, 750);
-        });
-        // scroll to top action
-        $('.scroll-top').on('click', function (event) {
-            event.preventDefault();
-            $('html, body').animate({scrollTop: 0}, 'slow');
-        });
-        // mobile nav toggle
-        $('#nav-toggle').on('click', function (event) {
-            event.preventDefault();
-            $('#main-nav').toggleClass("open");
-        });
-    });
-
-    // scroll function
-    function scrollToID(id, speed) {
-        var offSet = 0;
-        var targetOffset = $(id).offset().top - offSet;
-        var mainNav = $('#main-nav');
-        $('html,body').animate({scrollTop: targetOffset}, speed);
-        if (mainNav.hasClass("open")) {
-            mainNav.css("height", "1px").removeClass("in").addClass("collapse");
-            mainNav.removeClass("open");
-        }
-    }
-
-    if (typeof console === "undefined") {
-        console = {
-            log: function () {
-            }
-        };
-    }
-</script>
 </body>
+
 </html>
